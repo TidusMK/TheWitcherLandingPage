@@ -1,0 +1,48 @@
+{
+  "name": "the-witcher-iv-landing-page",
+  "version": "2.0.0",
+  "description": "Una landing page moderna y responsive para The Witcher IV creada con mejores prácticas de desarrollo",
+  "main": "index-improved.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost --open=index-improved.html",
+    "build": "npm run build:css",
+    "build:css": "npx tailwindcss -i ./css/styles.css -o ./css/dist.css --watch",
+    "serve": "python -m http.server 8000",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "optimize": "npm run optimize:images && npm run optimize:css",
+    "optimize:images": "echo 'Image optimization would go here'",
+    "optimize:css": "npx cssnano css/styles.css css/styles.min.css"
+  },
+  "keywords": [
+    "the-witcher",
+    "witcher-iv",
+    "cd-projekt-red",
+    "landing-page",
+    "tailwindcss",
+    "responsive",
+    "gaming"
+  ],
+  "author": "CD PROJEKT RED",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "prettier": "^3.2.0",
+    "cssnano-cli": "^1.0.5",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdprojektred/witcher-iv-landing-page.git"
+  },
+  "homepage": "https://thewitcher4.com",
+  "bugs": {
+    "url": "https://github.com/cdprojektred/witcher-iv-landing-page/issues"
+  }
+}
