@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+/* Custom CSS Variables */
+:root {
+  --witcher-gold: #D4AF37;
+  --witcher-dark: #1a1a1a;
+  --witcher-red: #8B0000;
+  --witcher-gray: #2a2a2a;
+  --witcher-light-gray: #3a3a3a;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+/* Custom Utility Classes */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.text-shadow-gold {
+  text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.5);
+}
+
+/* Parallax Background */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
+/* Gradient Backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(26,26,26,0.9) 0%, rgba(42,42,42,0.8) 50%, rgba(26,26,26,0.9) 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(145deg, rgba(42,42,42,0.9) 0%, rgba(26,26,26,0.9) 100%);
+}
+
+/* Interactive Elements */
+.card-hover {
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary {
+  background: var(--witcher-gold);
+  color: var(--witcher-dark);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #f4d03f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--witcher-gold);
+  border: 2px solid var(--witcher-gold);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--witcher-gold);
+  color: var(--witcher-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Navigation Styles */
+.navbar {
+  transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal);
+}
+
+.navbar-scrolled {
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: var(--witcher-gold);
+  transition: all var(--transition-normal);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: var(--witcher-gold);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Feature Cards */
+.feature-icon {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.card-hover:hover .feature-icon {
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  transform: scale(1.1);
+}
+
+/* News Cards */
+.news-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.news-card img {
+  transition: transform var(--transition-slow);
+}
+
+.news-card:hover img {
+  transform: scale(1.1);
+}
+
+.news-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 0%, rgba(212, 175, 55, 0.1) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  z-index: 1;
+}
+
+.news-card:hover::before {
+  opacity: 1;
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.loading.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+  
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* High Performance Styles */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Focus States for Accessibility */
+.btn-primary:focus,
+.btn-secondary:focus,
+.nav-link:focus {
+  outline: 2px solid var(--witcher-gold);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .parallax-bg,
+  .card-hover,
+  nav,
+  footer {
+    display: none !important;
+  }
+}
