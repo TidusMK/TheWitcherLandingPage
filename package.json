@@ -4,15 +4,16 @@
   "description": "Una landing page moderna y responsive para The Witcher IV creada con mejores prácticas de desarrollo",
   "main": "index-improved.html",
   "scripts": {
-    "dev": "live-server --port=3000 --host=localhost --open=index-improved.html",
+    "dev": "live-server --port=3000 --host=localhost --open=index.html",
     "build": "npm run build:css",
-    "build:css": "npx tailwindcss -i ./css/styles.css -o ./css/dist.css --watch",
+    "build:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify",
+    "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
     "serve": "python -m http.server 8000",
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "optimize": "npm run optimize:images && npm run optimize:css",
     "optimize:images": "echo 'Image optimization would go here'",
-    "optimize:css": "npx cssnano css/styles.css css/styles.min.css"
+    "optimize:css": "npx cssnano css/output.css css/output.min.css"
   },
   "keywords": [
     "the-witcher",
@@ -35,7 +36,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not ie 11"
   ],
   "repository": {
     "type": "git",

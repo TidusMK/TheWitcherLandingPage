@@ -40,51 +40,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/output.css">
 
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'witcher-gold': '#D4AF37',
-                        'witcher-dark': '#1a1a1a',
-                        'witcher-red': '#8B0000',
-                        'witcher-gray': '#2a2a2a',
-                        'witcher-light-gray': '#3a3a3a',
-                    },
-                    fontFamily: {
-                        'witcher': ['Georgia', 'serif'],
-                        'medieval': ['Cinzel', 'serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-                    },
-                }
-            }
-        }
-    </script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "The Witcher IV",
-        "description": "A new saga begins with Ciri as the protagonist in this open-world RPG developed by CD PROJEKT RED using Unreal Engine 5.",
-        "developer": {
-            "@type": "Organization",
-            "name": "CD PROJEKT RED"
-        },
-        "genre": ["RPG", "Open World", "Fantasy"],
-        "platform": ["PC", "PlayStation", "Xbox"],
-        "gameEngine": "Unreal Engine 5"
-    }
-    </script>
 </head>
 
 <body class="bg-witcher-dark text-white font-witcher">
@@ -139,10 +96,12 @@
 
             <!-- Hero Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-                <a href="https://www.youtube.com/watch?v=KKq6gl52XJs&ab_channel=TheWitcher" class="btn-primary text-lg" aria-label="Ver trailer oficial">
+                <a href="https://www.youtube.com/watch?v=KKq6gl52XJs&ab_channel=TheWitcher" class="btn-primary text-lg"
+                    aria-label="Ver trailer oficial">
                     Ver Trailer Oficial
                 </a>
-                <a href="https://www.youtube.com/watch?v=Nthv4xF_zHU&ab_channel=TheWitcher" class="btn-secondary text-lg" aria-label="Ver demostración técnica">
+                <a href="https://www.youtube.com/watch?v=Nthv4xF_zHU&ab_channel=TheWitcher"
+                    class="btn-secondary text-lg" aria-label="Ver demostración técnica">
                     Ver Tech Demo UE5
                 </a>
             </div>
