@@ -6,6 +6,7 @@ Una landing page moderna y responsive para **The Witcher IV** completamente refa
 - **Estructura modular**: Organización clara de archivos y directorios
 - **Código limpio**: Eliminación de estilos inline y JavaScript embebido
 - **Mejores prácticas**: Semántica HTML5, accesibilidad y SEO optimizado
+- **Mejores organizativa**: Se ha instalado npm y reorganizado tailwindCSS
 
 ### 📁 Nueva Estructura de Archivos
 
