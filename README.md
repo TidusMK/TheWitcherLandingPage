@@ -2,8 +2,6 @@
 
 Una landing page moderna y responsive para **The Witcher IV** completamente refactorizada con mejores prácticas de desarrollo web.
 
-## ✨ Mejoras Implementadas
-
 ### 🏗️ Arquitectura Mejorada
 - **Separación de responsabilidades**: CSS, JavaScript y HTML en archivos independientes
 - **Estructura modular**: Organización clara de archivos y directorios
